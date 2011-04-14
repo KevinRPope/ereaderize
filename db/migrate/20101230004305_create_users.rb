@@ -13,6 +13,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :access_level, :default => 0
       t.boolean :confirmed_opt_in, :default => false
       t.boolean :account_inactive, :default => false
+      t.string :ereader_email
       
       t.timestamps
     end

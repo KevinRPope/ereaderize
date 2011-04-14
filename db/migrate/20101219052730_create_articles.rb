@@ -7,6 +7,7 @@ class CreateArticles < ActiveRecord::Migration
       t.references :site
       t.string :to_email
       t.integer :times_sent
+      t.text :content
 
       t.timestamps
     end
