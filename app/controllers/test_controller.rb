@@ -63,6 +63,8 @@ class TestController < ApplicationController
   def index
     if session[:user_id]
       @user = User.find(session[:user_id], :select => "email, name, ereader_email, access_level")
+      @user.access_level = 1
+      @user.save
     end
     @sites = Site.select('domain')
   end
