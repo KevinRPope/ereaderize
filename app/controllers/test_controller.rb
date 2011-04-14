@@ -1,5 +1,5 @@
 class TestController < ApplicationController
-  require 'Nokogiri'
+  require 'nokogiri'
   require 'open-uri'
   require 'uri'
   require 'net/http'
