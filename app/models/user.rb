@@ -75,4 +75,12 @@ class User < ActiveRecord::Base
     self.pwsalt = self.object_id.to_s + rand.to_s
   end
 
+  def set_access
+    @user = User.find(session[:user_id])
+    @user.access_level = 1
+    @user.save
+    @user2 = User.find(session[:user_id])
+    p @user2
+  end
+
 end
