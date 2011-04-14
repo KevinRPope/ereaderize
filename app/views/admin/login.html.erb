@@ -1,0 +1,23 @@
+<div id="centerDoc"><div class="depot-form">
+<%= form_tag do %>
+  
+	<h2>Login</h2>
+
+  <%= render 'users/omniauth_login_form' -%>
+  
+<p>OR if you originally signed up using your email address and a password, login here:</p>
+  
+<div class="field">  
+	<%= label_tag :email -%><br />
+    <%= text_field_tag :email, params[:email], :autocomplete => :off %>
+</div>  
+	
+<div class="field">  
+	<%= label_tag :password%><br />
+    <%= password_field_tag :password %>
+</div>
+<div class="actions">	
+		<%= submit_tag "Login" %>
+</div>	
+<% end %>
+</div></div>

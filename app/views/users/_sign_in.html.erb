@@ -1,0 +1,13 @@
+<% if session[:user_id] %>
+		Logged in as <span class="username">
+			<% if @user.email.blank? %>
+				<%= @user.name %>
+			<% else %>
+				<%= @user.email -%>
+			<% end %>
+		</span>.  
+		Not you?  <%= link_to 'Logout', :controller => 'admin', :action => 'logout' -%>
+<% else %>
+		<%= link_to 'Login', :controller => 'admin', :action => 'login' %> or 
+		<%= link_to 'Register', :controller => 'admin', :action => 'register' %>
+<% end %>

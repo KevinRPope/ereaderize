@@ -1,0 +1,33 @@
+<h2>Thank you for signing up via Facebook!  Please set your password and give us your eReader's email address</h2>
+
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	
+  <p><%= f.label :kindle_email %><br />
+  <%= f.text_field :kindle_email %></p>
+
+  <p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %>
+  <%= f.hidden_field :current_password, "password" %></p>
+
+  <p><%= f.submit "Update" %></p>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? TODO: <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
+
+<%= link_to "Back", :back %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @article.url %>
+</p>
+
+<p>
+  <b>Stripped url:</b>
+  <%= @article.stripped_url %>
+</p>
+
+<p>
+  <b>Parameters:</b>
+  <%= @article.parameters %>
+</p>
+
+<p>
+  <b>Site_id:</b>
+  <%= @article.site_id %>
+</p>
+
+<p>
+  <b>To email:</b>
+  <%= @article.to_email %>
+</p>
+
+<p>
+  <b>Times sent:</b>
+  <%= @article.times_sent %>
+</p>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

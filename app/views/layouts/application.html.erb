@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :title -%> - eReaderize</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<%= raw(display_flash_messages) %>
+<body>
+
+	
+
+<div class="main-holder">
+	<div class="logo"><%= link_to "eReaderize", test_index_path -%></div>
+	<% if session[:user_id] -%>
+		<div class="top-button"><%= link_to 'Your Profile', :controller => 'users', :action => 'show', :id => session[:user_id] -%></div>
+	<% end -%>
+	<div class="sign-in-area">
+		<%= render :partial => "users/sign_in" -%>
+	</div>
+	<div class="clear"></div>
+	<div class="main-content">
+		<%= yield %>
+	</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<% title "Welcome to eReaderize" -%>
+
+<h2><%= yield :title -%></h2>
+<p>To use our service, first you need to sign up and give us your e-reader's email address.  Whenever you want to forward the content of a webpage to your e-reader, just put the URL in the box here and we'll send it right over to you!</p>
+<% if session[:user_id] -%>
+	<% if @user.ereader_email.blank? -%>
+		<fieldset class="no_ereader"><legend class="red">You need to set your <%= link_to "eReader email address", :controller => :users, :action => :ereader_edit, :id => session[:user_id] -%> before you can send articles!</legend>
+	<% else -%>
+		<fieldset class="yes_ereader">
+	<% end -%>
+<% end -%>
+<%= form_tag :controller => :test, :action => :test_grab do -%>
+	
+	<%= label_tag :site_url, "Article URL:" -%>
+	<%= text_field_tag(:site_url, nil, :size => 75) -%>
+	
+	<%= submit_tag "eReaderize" -%><br />
+	
+<!--
+  <div class="images_checkbox">
+  <% if session[:user_id] && (@user.access_level == 1) -%>
+	<%= check_box_tag :images -%>
+	<%= label_tag :images, "Include Images" -%>
+  <% else -%>
+	<%= check_box_tag :images, "Include Images", false, :disabled => true -%>
+	<%= label_tag :images, "Include Images", :disabled => true -%>
+  <% end -%>
+  </div>
+-->
+<% end -%>
+</fieldset>
+<br />
+<p><%= link_to 'New Site Form', :controller => :sites, :action => :new -%></p>
+
+<div class="parsed-sites">
+<p>List of currently supported domains.  Other sites will work with varying levels of success.</p>
+<ul>
+	<% @sites.each do |site| -%>
+		<li><%= site.domain -%></li>
+	<% end -%>
+</ul>
+</div><div class="clear"></div>

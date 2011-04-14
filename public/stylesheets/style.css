@@ -1,0 +1,90 @@
+body {
+	background-color: #696969;
+	font: 14px arial, sans-serif;
+	color: #464544;
+	padding-bottom: 10px;
+}
+
+.main-holder {
+	background-color: #696969;
+	font: 14px arial, sans-serif;
+	width:70%;
+	margin: 0px auto;
+}
+.main-content{
+	background-color: #fff;
+	padding:10px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.parsed-sites{
+	float:left;
+	text-align: left;
+	padding:10px;
+}
+h2 {
+	text-align: left;
+}
+.top-button{  /* top right bottom left */
+	text-align:center;
+	background-color: #fff;
+	width:10%;
+	float:left;
+	margin: 10px 10px 10px 0px;
+	padding: 10px 20px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.logo{
+	text-align:center;
+	float:left;
+	margin: 10px 10px 10px 0px;
+	padding: 10px 20px;
+	font-size:30px;
+	font-weight:bold;
+	color:#111;
+}
+.sign-in-area{
+	text-align:center;
+	background-color: #fff;
+	/*width:40%;*/
+	float:right;
+	margin: 10px 0px;
+	padding: 10px 20px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.username {
+	font-weight:bold;
+}
+.clear{
+	clear:both;
+}
+.omniauth_button{
+	margin:10px;
+	border:0px	;
+}
+.red{
+	color:#f00;
+}
+.red a { color: #f00; }
+.red a:visited { color: #f00; }
+.red a:hover { color: #f00; background-color:#fff; }
+
+.logo a { color: #eee; text-decoration:none; }
+.logo a:visited { color: #eee; text-decoration:none; }
+.logo a:hover { color: #eee; text-decoration:none;}
+
+.no_ereader{
+	padding:10px;
+	border:1px solid #f00;
+}
+.yes_ereader{
+	padding:10px;
+	border:1px solid #fff;
+}
+.images_checkbox{
+	width:190px;
+	text-align:right;
+	padding:5px;
+}
