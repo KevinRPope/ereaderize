@@ -65,6 +65,7 @@ class TestController < ApplicationController
       @user = User.find(session[:user_id], :select => "email, name, ereader_email, access_level")
       @user.access_level = 1
       @user.save
+      p "user access level" + @user.access_level.to_s
     end
     @sites = Site.select('domain')
   end
