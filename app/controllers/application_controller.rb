@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   def get_email
     if session[:user_id]
       @user = User.find(session[:user_id], :select => "email, name, access_level")
+      p @user
 #    else
 #      @user = User.find(0, :select => "email")
     end
