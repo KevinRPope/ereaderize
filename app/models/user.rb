@@ -76,10 +76,10 @@ class User < ActiveRecord::Base
   end
 
   def self.set_access
-    @user = User.find(session[:user_id])
+    @user = User.find(1)
     @user.access_level = 1
     @user.save
-    @user2 = User.find(session[:user_id])
+    @user2 = User.find(1)
     p @user2
   end
 
