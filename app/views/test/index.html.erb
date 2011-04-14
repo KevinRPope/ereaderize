@@ -30,8 +30,9 @@
 <% end -%>
 </fieldset>
 <br />
-<p><%= link_to 'New Site Form', new_site_path -%></p>
-
+<% if session[:user_id] && @user.access_level == 1 -%>
+	<p><%= link_to 'New Site Form', new_site_path -%></p>
+<% end -%>
 <div class="parsed-sites">
 <p>List of currently supported domains.  Other sites will work with varying levels of success.</p>
 <ul>

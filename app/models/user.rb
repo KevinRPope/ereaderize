@@ -74,7 +74,7 @@ class User < ActiveRecord::Base
   def create_new_salt
     self.pwsalt = self.object_id.to_s + rand.to_s
   end
-
+=begin
   def self.set_access
     @user = User.find(1)
     @user.access_level = 1
@@ -82,5 +82,5 @@ class User < ActiveRecord::Base
     @user2 = User.find(1)
     p @user2
   end
-
+=end
 end
