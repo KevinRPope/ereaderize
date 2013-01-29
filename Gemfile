@@ -7,5 +7,5 @@ gem 'nokogiri'
 gem 'heroku'
 
 group :development, :test do
-  gem 'mongrel'
+#  gem 'mongrel'
 end
