@@ -39,14 +39,14 @@ class TestController < ApplicationController
             :parameters => params[:site_url].split("?")[1],
             :site_id => Site.find_by_domain(url, :select => :id),
             :content => @doc,
-            :to_email => @user.email,
+            :to_email => @user.ereader_email,
             :times_sent => 1
           )
         end
         article.save
   
         if true
-          UserMailer.article(@user.email, @doc, title).deliver
+          UserMailer.article(@user.ereader_email, @doc, title).deliver
           flash[:notice] = "Your article has been sent!"
           redirect_to test_index_path
         else
@@ -56,11 +56,20 @@ class TestController < ApplicationController
       end
     else
       flash[:error] = "You need to create an eReaderize account before you can send an article to your eReader."
+      #set session[:article_url] to the article they tried to send!
       redirect_to :controller => :admin, :action => :register
     end
   end
 
   def index
+    #(2..10).each { |n| p n if n.isprime}
+
+=begin   
+    blah = "hello"
+    what = ""
+    blah.each_char {|c| what.insert(0,c)}
+    p what
+=end
     if session[:user_id]
       @user = User.find(session[:user_id], :select => "email, name, ereader_email, access_level")
     end

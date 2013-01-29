@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "pope.kevin@gmail.com"
+  default :from => "articles@ereaderize.com"
   
   def article(user_ereader_email, doc_to_send, doc_title)
     #@doc = doc_to_send
