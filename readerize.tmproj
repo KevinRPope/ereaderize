@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/controllers/sessions_controller.rb</string>
+	<string>app/models/site.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -26,9 +26,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>12</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>6</integer>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -105,6 +105,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>app/models/article.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>app/models/site.rb</key>
 		<dict>
 			<key>caret</key>
@@ -117,7 +131,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>57</integer>
+			<integer>0</integer>
 		</dict>
 		<key>app/models/user.rb</key>
 		<dict>
@@ -273,6 +287,7 @@
 		<string>app/controllers/admin_controller.rb</string>
 		<string>app/controllers/users_controller.rb</string>
 		<string>app/models/user.rb</string>
+		<string>app/models/article.rb</string>
 		<string>Gemfile</string>
 		<string>config/routes.rb</string>
 		<string>app/controllers/sessions_controller.rb</string>
@@ -280,6 +295,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{292, 4}, {983, 741}}</string>
+	<string>{{297, 21}, {983, 741}}</string>
 </dict>
 </plist>
